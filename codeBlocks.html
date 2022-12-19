@@ -168,13 +168,38 @@
           </i>
         </span>
       </div>
+      <h3 class="h3">Text Input with Error Message</h3>
+      <div class="form-group">
+        <label for="email">Text Input with Error Message</label>
+        <input type="text" class="form-control" placeholder="Enter email" id="email" value="Vijay Parmar">
+        <small class="error-msg d-block">Error message here</small>
+      </div>
+      <h3 class="h3">Form group Radio buttons inline</h3>
+      <div class="form-group">
+        <label for="" class="">Form group Radio buttons inline</label>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">Option 1
+          </label>
+        </div>
+        <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio">Option 2
+          </label>
+        </div>
+      </div>
+      <h3 class="h3">Form group with label and value</h3>
+      <div class="form-group">
+        <label for="email">ERE NAME</label>
+        <p class="form-control-value mg-0 pd-0">Name of ere here</p>
+      </div>
       <style>
         /* Info: Form group styles start */
         .form-group {
           margin-bottom: 1rem;
         }
 
-        .form-group label {
+        .form-group>label {
           line-height: 1.5;
           text-align: left;
           font-family: "Poppins", sans-serif;
@@ -184,6 +209,17 @@
           display: block;
           text-transform: uppercase;
           color: #9b9b9b;
+          font-weight: 400;
+        }
+
+        .form-group>.form-check-inline>label {
+          line-height: 1.5;
+          text-align: left;
+          font-family: "Poppins", sans-serif;
+          font-size: 14px !important;
+          letter-spacing: 0.3px !important;
+          display: block;
+          color: #4a4a4a;
           font-weight: 400;
         }
 
@@ -308,6 +344,14 @@
 
         textarea.form-control {
           height: auto;
+        }
+
+        .error-msg:empty {
+          display: none;
+        }
+
+        .form-group>small.error-msg {
+          font-size: 10px;
         }
 
         /* Info: Form group styles end */
