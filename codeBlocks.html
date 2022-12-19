@@ -388,7 +388,6 @@
           user-select: none;
         }
 
-        .obtn.focus,
         .obtn:focus {
           outline: none;
           outline: 0;
@@ -410,7 +409,6 @@
           border-color: #56a2ff;
         }
 
-        .obtn-primary.focus,
         .obtn-primary:focus {
           box-shadow: 0 0 0 .2rem #56a9ff;
         }
@@ -422,7 +420,8 @@
         }
 
         .obtn-primary:focus {
-          outline: none;
+          outline: none !important;
+          box-shadow: 0 0 0 transparent;
         }
 
         /* reset btn styles */
@@ -440,9 +439,9 @@
           border-color: #4a90e2;
         }
 
-        .obtn-reset.focus,
         .obtn-reset:focus {
-          box-shadow: 0 0 0 .2rem #56a9ff;
+          outline: none !important;
+          box-shadow: 0 0 0 transparent;
         }
 
         .obtn-reset:hover {
