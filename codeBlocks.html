@@ -43,6 +43,20 @@
   <main>
     <br><br>
     <article class="block">
+      <div class="maingrid">
+        <div class="pc-det">Project ID</div>
+        <div class="pc-det">Project ID</div>
+        <div class="pc-det">Project ID</div>
+        <div class="pc-det">Project ID</div>
+        <div class="pc-det">Project ID</div>
+      </div>
+      <style>
+        .maingrid {
+          display: grid;
+        }
+      </style>
+    </article>
+    <article class="block">
       <div class="accordion" id="accordionParent">
         <div class="accordion-group">
           <div class="accordion-heading">
@@ -367,8 +381,16 @@
       </style>
     </article>
     <article class="pd-4">
-      <button type="button" class="obtn obtn-primary"> SUBMIT </button>
-      <button type="button" class="obtn obtn-reset"> CANCEL </button>
+      <pre>
+        &lt;button type=&quot;button&quot; class=&quot;obtn obtn-lg obtn-primary&quot;&gt; SUBMIT &lt;/button&gt;
+      </pre>
+      <button type="button" class="obtn obtn-lg obtn-primary"> SUBMIT </button>
+      <button type="button" class="obtn obtn-reg obtn-primary"> SUBMIT </button>
+      <button type="button" class="obtn obtn-sm obtn-primary"> SUBMIT </button>
+      <!-- Info: obtn-reset/obtn-outline -->
+      <button type="button" class="obtn obtn-reg obtn-reset"> CANCEL </button>
+      <!-- Info: obtn-reset-red/obtn-outline-red -->
+      <button type="button" class="obtn obtn-reg obtn-outline-red"> CANCEL </button>
       <style>
         .obtn {
           border: none;
@@ -386,6 +408,18 @@
           letter-spacing: normal;
           text-align: center;
           user-select: none;
+        }
+        .obtn.obtn-lg{
+          font-size: 18px;
+          padding: 8px 16px;
+        }
+        .obtn.obtn-reg{
+          font-size: 14px;
+          padding: 8px 16px;
+        }
+        .obtn.obtn-sm{
+          font-size: 14px;
+          padding: 4px 8px;
         }
 
         .obtn:focus {
@@ -425,7 +459,7 @@
         }
 
         /* reset btn styles */
-        .obtn-reset {
+        .obtn-reset, .obtn-outline {
           border: 1px solid #56a9ff;
           background-color: transparent;
           color: #56a9ff;
@@ -433,21 +467,60 @@
 
         .obtn-reset:not(:disabled):not(.disabled).active,
         .obtn-reset:not(:disabled):not(.disabled):active,
-        .show>.obtn-reset.dropdown-toggle {
+        .show>.obtn-reset.dropdown-toggle, 
+        .obtn-outline:not(:disabled):not(.disabled).active,
+        .obtn-outline:not(:disabled):not(.disabled):active,
+        .show>.obtn-outline.dropdown-toggle 
+        {
           color: #56a9ff;
           background-color: transparent;
           border-color: #4a90e2;
         }
 
-        .obtn-reset:focus {
+        .obtn-reset:focus,
+        .obtn-outline:focus {
           outline: none !important;
           box-shadow: 0 0 0 transparent;
         }
 
-        .obtn-reset:hover {
+        .obtn-reset:hover,
+        .obtn-outline:hover {
           color: #56a9ff;
           background-color: #f6f6f6;
           border-color: #56a2ff;
+        }
+
+        /* Info: reset red styles */
+        .obtn-reset-red,
+        .obtn-outline-red {
+          border: 1px solid #ff1a1a;
+          background-color: transparent;
+          color: #ff1a1a;
+        }
+
+        .obtn-reset-red:not(:disabled):not(.disabled).active,
+        .obtn-reset-red:not(:disabled):not(.disabled):active,
+        .show>.obtn-reset-red.dropdown-toggle, 
+        .obtn-outline-red:not(:disabled):not(.disabled).active,
+        .obtn-outline-red:not(:disabled):not(.disabled):active,
+        .show>.obtn-outline-red.dropdown-toggle
+        {
+          color: #ff1a1a;
+          background-color: transparent;
+          border-color: #ff1a1a;
+        }
+
+        .obtn-reset-red:focus,
+        .obtn-outline-red {
+          outline: none !important;
+          box-shadow: 0 0 0 transparent;
+        }
+
+        .obtn-reset-red:hover,
+        .obtn-outline-red:hover {
+          color: #ff1a1a;
+          background-color: #f7eded;
+          border-color: #ff1a1a;
         }
       </style>
     </article>
@@ -2131,6 +2204,51 @@
           }
         }
       </style>
+    </article>
+
+    <article>
+      <div class="full-details-header bb-1 col-lg-12 d-flex flex-wrap justify-content-between pd-0 pdb-2 mgb-3">
+        <div class="col-lg-2 pd-0 d-flex align-items-center">
+          <!-- <h4 class="pd-0 mg-0">{{componentHeader}}</h4> -->
+        </div>
+        <div class="col-lg-10 d-flex flex-wrap justify-content-start pd-0">
+          <div class="col-lg-8 pd-0 d-flex flex-wrap justify-content-start">
+            <div class="col-lg-5 pd-0 pdr-2 pdt-2 text-right">
+              <!-- <label class="pd-0 text_14 mg-0">Assign to audit executive</label> -->
+            </div>
+            <div class="col-lg-7 pd-0">
+              <div class="form-group mg-0">
+                <span class="has-icon">
+                  <!-- <input type="text" matInput [formControl]="txtAuditor" [(ngModel)]="AssignAuditorPerson"
+                    [matAutocomplete]="auto" placeholder="Search Auditor name" class="form-control text_12"> -->
+                  <i class="con active-pointer">
+                    <!-- <button class="primary_btn pdx-3 pdy-1" (click)="AssignedToAuditPerson('Assign')">Assign</button>
+                    <button class="secondary_btn bg-white pdx-3 pdy-1" (click)="resetData()" name="resetData"> Reset
+                    </button> -->
+                  </i>
+                </span>
+                <!-- <mat-autocomplete #auto="matAutocomplete">
+                  <mat-option *ngFor="let item of lstAuditPersons" [value]="Full_Name" (click)="onChangename(item.Value)">
+                    {{item.Value}}
+                  </mat-option>
+                </mat-autocomplete> -->
+                <div class="col-lg-12 pd-0">
+                  <!-- <span *ngIf="IsInValidAuditor" class="text-danger font-10">
+                    Please select auditor.
+                  </span> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 pd-0 d-flex align-items-center justify-content-end">
+            <div class="rcs_search_assign d-flex align-items-center">
+              <div class="xl_icon ml_auto pos-relative">
+                <!-- excel export and icons -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </article>
   </main>
   <!-- main body content -->

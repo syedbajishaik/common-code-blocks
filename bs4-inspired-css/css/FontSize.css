@@ -1,0 +1,228 @@
+/* Info: font size START */
+.font-8 {
+    font-size: 0.5rem;
+}
+.font-10 {
+    font-size: 0.625rem;
+}
+.font-12 {
+    font-size: 0.75rem;
+}
+.font-14 {
+    font-size: 0.875rem;
+}
+.font-16 {
+    font-size: 1rem;
+}
+.font-18 {
+    font-size: 1.125rem;
+}
+.font-20 {
+    font-size: 1.25rem;
+}
+.font-22 {
+    font-size: 1.375rem;
+}
+.font-24 {
+    font-size: 1.5rem;
+}
+.font-26 {
+    font-size: 1.625rem;
+}
+.font-28 {
+    font-size: 1.75rem;
+}
+.font-30 {
+    font-size: 1.875rem;
+}
+@media (min-width: 576px) {
+    .font-sm-8 {
+        font-size: 0.5rem;
+    }
+    .font-sm-10 {
+        font-size: 0.625rem;
+    }
+    .font-sm-12 {
+        font-size: 0.75rem;
+    }
+    .font-sm-14 {
+        font-size: 0.875rem;
+    }
+    .font-sm-16 {
+        font-size: 1rem;
+    }
+    .font-sm-18 {
+        font-size: 1.125rem;
+    }
+    .font-sm-20 {
+        font-size: 1.25rem;
+    }
+    .font-sm-22 {
+        font-size: 1.375rem;
+    }
+    .font-sm-24 {
+        font-size: 1.5rem;
+    }
+    .font-sm-26 {
+        font-size: 1.625rem;
+    }
+    .font-sm-28 {
+        font-size: 1.75rem;
+    }
+    .font-sm-30 {
+        font-size: 1.875rem;
+    }
+}
+@media (min-width: 768px) {
+    .font-md-8 {
+        font-size: 0.5rem;
+    }
+    .font-md-10 {
+        font-size: 0.625rem;
+    }
+    .font-md-12 {
+        font-size: 0.75rem;
+    }
+    .font-md-14 {
+        font-size: 0.875rem;
+    }
+    .font-md-16 {
+        font-size: 1rem;
+    }
+    .font-md-18 {
+        font-size: 1.125rem;
+    }
+    .font-md-20 {
+        font-size: 1.25rem;
+    }
+    .font-md-22 {
+        font-size: 1.375rem;
+    }
+    .font-md-24 {
+        font-size: 1.5rem;
+    }
+    .font-md-26 {
+        font-size: 1.625rem;
+    }
+    .font-md-28 {
+        font-size: 1.75rem;
+    }
+    .font-md-30 {
+        font-size: 1.875rem;
+    }
+}
+@media (min-width: 992px) {
+    .font-lg-8 {
+        font-size: 0.5rem;
+    }
+    .font-lg-10 {
+        font-size: 0.625rem;
+    }
+    .font-lg-12 {
+        font-size: 0.75rem;
+    }
+    .font-lg-14 {
+        font-size: 0.875rem;
+    }
+    .font-lg-16 {
+        font-size: 1rem;
+    }
+    .font-lg-18 {
+        font-size: 1.125rem;
+    }
+    .font-lg-20 {
+        font-size: 1.25rem;
+    }
+    .font-lg-22 {
+        font-size: 1.375rem;
+    }
+    .font-lg-24 {
+        font-size: 1.5rem;
+    }
+    .font-lg-26 {
+        font-size: 1.625rem;
+    }
+    .font-lg-28 {
+        font-size: 1.75rem;
+    }
+    .font-lg-30 {
+        font-size: 1.875rem;
+    }
+}
+@media (min-width: 1200px) {
+    .font-xl-8 {
+        font-size: 0.5rem;
+    }
+    .font-xl-10 {
+        font-size: 0.625rem;
+    }
+    .font-xl-12 {
+        font-size: 0.75rem;
+    }
+    .font-xl-14 {
+        font-size: 0.875rem;
+    }
+    .font-xl-16 {
+        font-size: 1rem;
+    }
+    .font-xl-18 {
+        font-size: 1.125rem;
+    }
+    .font-xl-20 {
+        font-size: 1.25rem;
+    }
+    .font-xl-22 {
+        font-size: 1.375rem;
+    }
+    .font-xl-24 {
+        font-size: 1.5rem;
+    }
+    .font-xl-26 {
+        font-size: 1.625rem;
+    }
+    .font-xl-28 {
+        font-size: 1.75rem;
+    }
+    .font-xl-30 {
+        font-size: 1.875rem;
+    }
+}
+@media (min-width: 1400px) {
+    .font-xxl-8 {
+        font-size: 0.5rem;
+    }
+    .font-xxl-10 {
+        font-size: 0.625rem;
+    }
+    .font-xxl-12 {
+        font-size: 0.75rem;
+    }
+    .font-xxl-14 {
+        font-size: 0.875rem;
+    }
+    .font-xxl-16 {
+        font-size: 1rem;
+    }
+    .font-xxl-18 {
+        font-size: 1.125rem;
+    }
+    .font-xxl-20 {
+        font-size: 1.25rem;
+    }
+    .font-xxl-22 {
+        font-size: 1.375rem;
+    }
+    .font-xxl-24 {
+        font-size: 1.5rem;
+    }
+    .font-xxl-26 {
+        font-size: 1.625rem;
+    }
+    .font-xxl-28 {
+        font-size: 1.75rem;
+    }
+    .font-xxl-30 {
+        font-size: 1.875rem;
+    }
+}
+/* Info: font size END */
