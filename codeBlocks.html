@@ -68,8 +68,24 @@
       </style>
     </article>
     <article class="block">
-      <div class="accordion accordion-general accordion-small" id="accordionParent">
+      <div class="accordion" id="accordionParent">
         <div class="accordion-group">
+          <div class="accordion-heading">
+            <h3 class="pd-0 mg-0">
+              Accordion Header goes here
+              <a data-toggle="collapse" data-parent="#accordionParent" href="#collapseOneDefault" aria-expanded="true"
+                aria-controls="collapseOne" class="float-right">
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </h3>
+            <div class="clearfix clear-fix"></div>
+          </div>
+          <div id="collapseOneDefault" class="accordion-body collapse">
+            <h1 class="mg-0 pd-0">Content goes here</h1>
+          </div>
+        </div>
+        <br>
+        <div class="accordion-group accordion-general accordion-small">
           <div class="accordion-heading">
             <!-- <h5 class="pd-0 mg-0">
               Accordion Header goes here
@@ -92,10 +108,8 @@
             <h1 class="mg-0 pd-0">Content goes here</h1>
           </div>
         </div>
-      </div>
-      <br>
-      <div class="accordion accordion-general accordion-medium" id="accordionParent">
-        <div class="accordion-group">
+        <br>
+        <div class="accordion-group accordion-general accordion-medium">
           <div class="accordion-heading">
             <!-- <h5 class="pd-0 mg-0">
               Accordion Header goes here
@@ -287,8 +301,9 @@
       <!-- Info: obtn-reset-red/obtn-outline-red -->
       <button type="button" class="obtn obtn-reg obtn-outline-red"> CANCEL </button>
     </article>
+    <h3 class="h3">add class "two-cols" for two columns. "three-cols" for three columns</h3>
     <article>
-      <div class="keyValuePair-mainDiv d-flex flex-row flex-lg-nowrap flex-wrap">
+      <div class="keyValuePair-mainDiv four-cols d-flex flex-row flex-wrap">
         <div class="sod_table keyValTable mgb-4 mgb-lg-0">
           <div class="keyValRow">
             <div class="keyVal_key">
