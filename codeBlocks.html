@@ -9,19 +9,21 @@
     rel="stylesheet" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <!-- <link rel="stylesheet" href="./css/main.css" /> -->
-  <!-- <link rel="stylesheet" href="./css/customStyles.css" /> -->
-  <link rel="stylesheet" href="./customStyles-new.css" />
-  <link rel="stylesheet" href="./custom-table-heading.css" />
-  <link rel="stylesheet" href="./form-control-old.css" />
-  <link rel="stylesheet" href="./form-group.css" />
-  <link rel="stylesheet" href="./obtn.css" />
-  <link rel="stylesheet" href="./omne-card-only.css" />
-  <link rel="stylesheet" href="./sod-table.css" />
-  <link rel="stylesheet" href="./summary-and-full-details-card.css" />
-  <link rel="stylesheet" href="./tabs-group.css" />
-  <link rel="stylesheet" href="./xre-table.css" />
+  <link rel="stylesheet" href="./css/fontawesome6/css/all.css" />
+  <link rel="stylesheet" href="./css/customStyles-new.css" />
+  <link rel="stylesheet" href="./css/custom-table-heading.css" />
+  <link rel="stylesheet" href="./css/form-control-old.css" />
+  <link rel="stylesheet" href="./css/form-group.css" />
+  <link rel="stylesheet" href="./css/obtn.css" />
+  <link rel="stylesheet" href="./css/omne-card-only.css" />
+  <link rel="stylesheet" href="./css/sod-table.css" />
+  <link rel="stylesheet" href="./css/summary-and-full-details-card.css" />
+  <link rel="stylesheet" href="./css/tabs-group.css" />
+  <link rel="stylesheet" href="./css/xre-table.css" />
+  <link rel="stylesheet" href="./css/accordion-one.css" />
   <style>
     body {
+      font-family: 'Poppins', sans-serif;
       background: white;
     }
 
@@ -66,19 +68,53 @@
       </style>
     </article>
     <article class="block">
-      <div class="accordion" id="accordionParent">
+      <div class="accordion accordion-general accordion-small" id="accordionParent">
         <div class="accordion-group">
           <div class="accordion-heading">
-            <h3 class="pd-0 mg-0">
+            <!-- <h5 class="pd-0 mg-0">
               Accordion Header goes here
               <a data-toggle="collapse" data-parent="#accordionParent" href="#collapseOne" aria-expanded="true"
                 aria-controls="collapseOne" class="float-right">
-                <img class="ic-angle-down" width="14" height="14" src="./images/icons/ic-angle-down-cropped.svg"
-                  alt="ic-pin">
+                <i class="fa-solid fa-angle-down"></i>
               </a>
-            </h3>
+            </h5> -->
+            
+            <a data-toggle="collapse" data-parent="#accordionParent" href="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne" class="">
+              <h5 class="pd-0 mg-0 d-flex align-items-center justify-content-between">
+                Accordion Header goes here
+                <i class="fa-solid fa-angle-down"></i>
+              </h5>
+            </a>
+            <div class="clearfix clear-fix"></div>
           </div>
           <div id="collapseOne" class="accordion-body collapse">
+            <h1 class="mg-0 pd-0">Content goes here</h1>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="accordion accordion-general accordion-medium" id="accordionParent">
+        <div class="accordion-group">
+          <div class="accordion-heading">
+            <!-- <h5 class="pd-0 mg-0">
+              Accordion Header goes here
+              <a data-toggle="collapse" data-parent="#accordionParent" href="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne" class="float-right">
+                <i class="fa-solid fa-angle-down"></i>
+              </a>
+            </h5> -->
+            
+            <a data-toggle="collapse" data-parent="#accordionParent" href="#collapsemediumOne" aria-expanded="true"
+              aria-controls="collapseOne" class="">
+              <h5 class="pd-0 mg-0 d-flex align-items-center justify-content-between">
+                Accordion Header goes here
+                <i class="fa-solid fa-angle-down"></i>
+              </h5>
+            </a>
+            <div class="clearfix clear-fix"></div>
+          </div>
+          <div id="collapsemediumOne" class="accordion-body collapse">
             <h1 class="mg-0 pd-0">Content goes here</h1>
           </div>
         </div>

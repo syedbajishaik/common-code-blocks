@@ -1,0 +1,53 @@
+.accordion-general .accordion-heading {
+    width: 100%;
+    position: relative;
+    display: block;
+    background-color: #56a9ff;
+    padding: 8px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.accordion-general .accordion-heading h1,
+.accordion-general .accordion-heading h2,
+.accordion-general .accordion-heading h3,
+.accordion-general .accordion-heading h4,
+.accordion-general .accordion-heading h5,
+.accordion-general .accordion-heading a {
+    color: white;
+    text-decoration: none;
+}
+
+.accordion-small .accordion-heading {
+    padding: 8px;
+}
+.accordion-small .accordion-heading h1,
+.accordion-small .accordion-heading h2,
+.accordion-small .accordion-heading h3,
+.accordion-small .accordion-heading h4,
+.accordion-small .accordion-heading h5,
+.accordion-small .accordion-heading a {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.accordion-medium .accordion-heading 
+.accordion-regular .accordion-heading 
+{
+    padding: 10px 8px;
+}
+.accordion-medium .accordion-heading h1,
+.accordion-regular .accordion-heading h1,
+.accordion-medium .accordion-heading h2,
+.accordion-regular .accordion-heading h2,
+.accordion-medium .accordion-heading h3,
+.accordion-regular .accordion-heading h3,
+.accordion-medium .accordion-heading h4,
+.accordion-regular .accordion-heading h4,
+.accordion-medium .accordion-heading h5,
+.accordion-regular .accordion-heading h5,
+.accordion-medium .accordion-heading a,
+.accordion-regular .accordion-heading a 
+{
+    font-size: 16px;
+    font-weight: 500;
+}
