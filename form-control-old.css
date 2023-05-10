@@ -1,0 +1,29 @@
+.form_control label {
+    line-height: 1.5;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: .5rem;
+    font-size: 10px !important;
+    letter-spacing: 0.3px !important;
+    display: block;
+    text-transform: uppercase;
+    color: #9b9b9b;
+    font-weight: 400;
+}
+
+.form_control input,
+.form_control select {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    border: solid 1px #e7e7e7;
+    color: #4a4a4a;
+    padding: 0.6rem 1rem;
+    outline: none;
+    min-height: 35px;
+    font-size: 14px !important;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.4px !important;
+    line-height: normal !important;
+}

@@ -1,0 +1,115 @@
+.obtn {
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    outline: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    user-select: none;
+}
+.obtn.obtn-lg {
+    font-size: 18px;
+    padding: 8px 16px;
+}
+.obtn.obtn-reg {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+.obtn.obtn-sm {
+    font-size: 14px;
+    padding: 4px 8px;
+}
+.obtn:focus {
+    outline: none;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem #56a9ff;
+}
+/* primary btn styles */
+.obtn-primary {
+    color: #fff;
+    background-color: #56a9ff;
+    border: 1px solid #56a9ff;
+}
+.obtn-primary:not(:disabled):not(.disabled).active,
+.obtn-primary:not(:disabled):not(.disabled):active,
+.show>.obtn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #56a2ff;
+    border-color: #56a2ff;
+}
+.obtn-primary:focus {
+    box-shadow: 0 0 0 .2rem #56a9ff;
+}
+.obtn-primary:hover {
+    color: #fff;
+    background-color: #56a0ff;
+    border-color: #56a2ff;
+}
+.obtn-primary:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 transparent;
+}
+/* reset btn styles */
+.obtn-reset,
+.obtn-outline {
+    border: 1px solid #56a9ff;
+    background-color: transparent;
+    color: #56a9ff;
+}
+.obtn-reset:not(:disabled):not(.disabled).active,
+.obtn-reset:not(:disabled):not(.disabled):active,
+.show>.obtn-reset.dropdown-toggle,
+.obtn-outline:not(:disabled):not(.disabled).active,
+.obtn-outline:not(:disabled):not(.disabled):active,
+.show>.obtn-outline.dropdown-toggle {
+    color: #56a9ff;
+    background-color: transparent;
+    border-color: #4a90e2;
+}
+.obtn-reset:focus,
+.obtn-outline:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 transparent;
+}
+.obtn-reset:hover,
+.obtn-outline:hover {
+    color: #56a9ff;
+    background-color: #f6f6f6;
+    border-color: #56a2ff;
+}
+/* Info: reset red styles */
+.obtn-reset-red,
+.obtn-outline-red {
+    border: 1px solid #ff1a1a;
+    background-color: transparent;
+    color: #ff1a1a;
+}
+.obtn-reset-red:not(:disabled):not(.disabled).active,
+.obtn-reset-red:not(:disabled):not(.disabled):active,
+.show>.obtn-reset-red.dropdown-toggle,
+.obtn-outline-red:not(:disabled):not(.disabled).active,
+.obtn-outline-red:not(:disabled):not(.disabled):active,
+.show>.obtn-outline-red.dropdown-toggle {
+    color: #ff1a1a;
+    background-color: transparent;
+    border-color: #ff1a1a;
+}
+.obtn-reset-red:focus,
+.obtn-outline-red {
+    outline: none !important;
+    box-shadow: 0 0 0 transparent;
+}
+.obtn-reset-red:hover,
+.obtn-outline-red:hover {
+    color: #ff1a1a;
+    background-color: #f7eded;
+    border-color: #ff1a1a;
+}

@@ -1,0 +1,7 @@
+.esign-card,
+.omne-card {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: -2px 0 12px 0 rgba(0, 0, 0, 0.18);
+}

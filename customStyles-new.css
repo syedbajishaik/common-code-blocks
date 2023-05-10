@@ -2243,3 +2243,11 @@
 }
 
 /*  */
+.html-code{
+    width: 100%;
+    padding: 16px;
+    background: #535353;
+    color: white;
+    display: block;
+    line-height: 30px;
+}
