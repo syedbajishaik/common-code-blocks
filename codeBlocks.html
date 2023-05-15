@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="./css/tabs-group.css" />
   <link rel="stylesheet" href="./css/xre-table.css" />
   <link rel="stylesheet" href="./css/accordion-one.css" />
+  <link rel="stylesheet" href="./css/tooltips.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -94,7 +95,7 @@
                 <i class="fa-solid fa-angle-down"></i>
               </a>
             </h5> -->
-            
+
             <a data-toggle="collapse" data-parent="#accordionParent" href="#collapseOne" aria-expanded="true"
               aria-controls="collapseOne" class="">
               <h5 class="pd-0 mg-0 d-flex align-items-center justify-content-between">
@@ -118,7 +119,7 @@
                 <i class="fa-solid fa-angle-down"></i>
               </a>
             </h5> -->
-            
+
             <a data-toggle="collapse" data-parent="#accordionParent" href="#collapsemediumOne" aria-expanded="true"
               aria-controls="collapseOne" class="">
               <h5 class="pd-0 mg-0 d-flex align-items-center justify-content-between">
@@ -733,49 +734,14 @@
         <div class="clearfix clear-fix"></div>
       </div>
     </article>
-    <article>
-      <div class="full-details-header bb-1 col-lg-12 d-flex flex-wrap justify-content-between pd-0 pdb-2 mgb-3">
-        <div class="col-lg-2 pd-0 d-flex align-items-center">
-          <!-- <h4 class="pd-0 mg-0">{{componentHeader}}</h4> -->
-        </div>
-        <div class="col-lg-10 d-flex flex-wrap justify-content-start pd-0">
-          <div class="col-lg-8 pd-0 d-flex flex-wrap justify-content-start">
-            <div class="col-lg-5 pd-0 pdr-2 pdt-2 text-right">
-              <!-- <label class="pd-0 text_14 mg-0">Assign to audit executive</label> -->
-            </div>
-            <div class="col-lg-7 pd-0">
-              <div class="form-group mg-0">
-                <span class="has-icon">
-                  <!-- <input type="text" matInput [formControl]="txtAuditor" [(ngModel)]="AssignAuditorPerson"
-                    [matAutocomplete]="auto" placeholder="Search Auditor name" class="form-control text_12"> -->
-                  <i class="con active-pointer">
-                    <!-- <button class="primary_btn pdx-3 pdy-1" (click)="AssignedToAuditPerson('Assign')">Assign</button>
-                    <button class="secondary_btn bg-white pdx-3 pdy-1" (click)="resetData()" name="resetData"> Reset
-                    </button> -->
-                  </i>
-                </span>
-                <!-- <mat-autocomplete #auto="matAutocomplete">
-                  <mat-option *ngFor="let item of lstAuditPersons" [value]="Full_Name" (click)="onChangename(item.Value)">
-                    {{item.Value}}
-                  </mat-option>
-                </mat-autocomplete> -->
-                <div class="col-lg-12 pd-0">
-                  <!-- <span *ngIf="IsInValidAuditor" class="text-danger font-10">
-                    Please select auditor.
-                  </span> -->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 pd-0 d-flex align-items-center justify-content-end">
-            <div class="rcs_search_assign d-flex align-items-center">
-              <div class="xl_icon ml_auto pos-relative">
-                <!-- excel export and icons -->
-              </div>
-            </div>
-          </div>
-        </div>
+
+    <article class="block">
+      <h3 class="h3">Tool Tips</h3>
+      <br><br>
+      <div class="col-lg-12 pd-3">
+        <button data-tooltip="Email Message" data-tooltip-location="left">This is for left tooltip</button>
       </div>
+      <div class="clearfix clear-fix"></div>
     </article>
   </main>
   <!-- main body content -->
