@@ -1,0 +1,104 @@
+.custom_modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000008c;
+    z-index: 999;
+    display: none;
+}
+
+.custom_modal.active {
+    display: block;
+}
+
+.custom_modal_wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 4px;
+    width: 70%;
+}
+
+.custom_modal_header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #979797;
+    display: flex;
+    align-items: center;
+}
+
+.custom_modal_header>.close {
+    margin-left: auto;
+}
+
+.custom_modal_header>.close:hover {
+    opacity: 1;
+}
+
+.custom_modal_header>.close:hover svg * {
+    fill: #d0021b;
+}
+
+/* Info: custom modal width styles */
+.custom_modal-width-xsm {
+    width: 20% !important;
+}
+
+.custom_modal-width-sm {
+    width: 30% !important;
+}
+
+.custom_modal-width-mdsm {
+    width: 40% !important;
+}
+
+.custom_modal-width-md {
+    width: 50% !important;
+}
+
+.custom_modal-width-lgmd {
+    width: 60% !important;
+}
+
+.custom_modal-width-lg {
+    width: 70% !important;
+}
+
+.custom_modal-width-mdlg {
+    width: 80% !important;
+}
+
+.custom_modal-width-xlg {
+    width: 90% !important;
+}
+
+/* Info: custom modal width styles END */
+
+/* scrollable modal */
+body.modal-opened {
+    overflow: hidden !important;
+}
+
+body.modal-opened .custom_modal.active {
+    display: block;
+    overflow: auto;
+}
+
+body.modal-opened #edit_projectAccept .custom_modal_wrap {
+    top: 0;
+    transform: translate(-50%, 20px);
+}
+
+body.modal-opened #edit_projectAccept .custom_modal_wrap {
+    top: 0;
+    transform: translate(-50%, 20px);
+}
+
+body.modal-opened #edit_projectAccept .custom_modal_wrap .custom_body_wrap.custom_container {
+    padding-right: 0px !important;
+}
+
+/* scrollable modal END */
