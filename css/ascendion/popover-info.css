@@ -1,0 +1,289 @@
+
+.text-color-white{
+  color: #ffffff;
+}
+.text-color-green2{
+  color: var(--text-color-green2) !important;
+}
+.text-color-yellow{
+  color: var(--text-color-yellow) !important;
+}
+.has-popover {
+  position: relative;
+  overflow: visible !important;
+}
+
+.has-popover.active:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-top: solid 10px transparent;
+  border-right: solid 10px transparent;
+  border-bottom: solid 10px black;
+  border-left: solid 10px transparent;
+}
+
+.has-popover i.fa-circle-info {
+  cursor: pointer;
+}
+
+.popover-info {
+  position: absolute;
+  top: 24px;
+  z-index: 8;
+  display: none;
+
+  border: 1px solid rgba(195, 195, 195, 1);
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 1);
+  border-radius: 10px;
+  border-top: none;
+}
+
+.has-popover.active .popover-info {
+  display: block;
+}
+
+.popover-info h6 {
+  color: var(--text-color-green2);
+}
+
+.popover-table-wrap {
+  overflow-x: auto;
+}
+
+.popover--table {
+  font-size: 12px;
+  color: white;
+}
+
+.popover--table.table th[class|="colw"],
+.popover--table.table td[class|="colw"] {
+  float: unset !important;
+}
+
+.popover--table.table th {
+  background: #C3C3C3;
+}
+
+.popover-info--head {
+  box-shadow: 0px 0.3px 0px 0px #e7e7e7;
+}
+
+.popover-info.width-650 {
+  width: 650px;
+}
+
+.popover-info.width-550 {
+  width: 550px;
+}
+
+.popover-info.width-450 {
+  width: 450px;
+}
+
+.popover-info.width-350 {
+  width: 350px;
+}
+
+.popover-info.width-250 {
+  width: 250px;
+}
+
+.popover-info.width-150 {
+  width: 150px;
+}
+
+.popover-info.align-left {
+  left: -16px;
+  transform: translateX(0%);
+}
+
+.popover-info.align-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popover-info.align-right {
+  right: -16px;
+  left: unset;
+  transform: translateX(0%);
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query since this is the default in Bootstrap */
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .popover-info.width-sm-650 {
+    width: 650px;
+  }
+
+  .popover-info.width-sm-550 {
+    width: 550px;
+  }
+
+  .popover-info.width-sm-450 {
+    width: 450px;
+  }
+
+  .popover-info.width-sm-350 {
+    width: 350px;
+  }
+
+  .popover-info.width-sm-250 {
+    width: 250px;
+  }
+
+  .popover-info.width-sm-150 {
+    width: 150px;
+  }
+
+  .popover-info.align-sm-left {
+    left: -16px;
+    transform: translateX(0%);
+  }
+
+  .popover-info.align-sm-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .popover-info.align-sm-right {
+    right: -16px;
+    left: unset;
+    transform: translateX(0%);
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .popover-info.width-md-650 {
+    width: 650px;
+  }
+
+  .popover-info.width-md-550 {
+    width: 550px;
+  }
+
+  .popover-info.width-md-450 {
+    width: 450px;
+  }
+
+  .popover-info.width-md-350 {
+    width: 350px;
+  }
+
+  .popover-info.width-md-250 {
+    width: 250px;
+  }
+
+  .popover-info.width-md-150 {
+    width: 150px;
+  }
+
+  .popover-info.align-md-left {
+    left: -16px;
+    transform: translateX(0%);
+  }
+
+  .popover-info.align-md-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .popover-info.align-md-right {
+    right: -16px;
+    left: unset;
+    transform: translateX(0%);
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .popover-info.width-lg-650 {
+    width: 650px;
+  }
+
+  .popover-info.width-lg-550 {
+    width: 550px;
+  }
+
+  .popover-info.width-lg-450 {
+    width: 450px;
+  }
+
+  .popover-info.width-lg-350 {
+    width: 350px;
+  }
+
+  .popover-info.width-lg-250 {
+    width: 250px;
+  }
+
+  .popover-info.width-lg-150 {
+    width: 150px;
+  }
+
+  .popover-info.align-lg-left {
+    left: -16px;
+    transform: translateX(0%);
+  }
+
+  .popover-info.align-lg-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .popover-info.align-lg-right {
+    right: -16px;
+    left: unset;
+    transform: translateX(0%);
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .popover-info.width-xlg-650 {
+    width: 650px;
+  }
+
+  .popover-info.width-xlg-550 {
+    width: 550px;
+  }
+
+  .popover-info.width-xlg-450 {
+    width: 450px;
+  }
+
+  .popover-info.width-xlg-350 {
+    width: 350px;
+  }
+
+  .popover-info.width-xlg-250 {
+    width: 250px;
+  }
+
+  .popover-info.width-xlg-150 {
+    width: 150px;
+  }
+
+  .popover-info.align-xlg-left {
+    left: -16px;
+    transform: translateX(0%);
+  }
+
+  .popover-info.align-xlg-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .popover-info.align-xlg-right {
+    right: -16px;
+    left: unset;
+    transform: translateX(0%);
+  }
+}

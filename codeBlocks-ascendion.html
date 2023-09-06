@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esign-Vendor: ResourcesList</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+        type="text/css" />
+    <!-- custom classes -->
+    <link rel="stylesheet" href="./bs4-inspired-css-for-any-project/css/FontSize.css" />
+
+    
+    <!-- <link rel="stylesheet" href="./css/main.css" /> -->
+    <link rel="stylesheet" href="./css/root.css" />
+    <link rel="stylesheet" href="./css/fontawesome6/css/all.css" />
+    <link rel="stylesheet" href="./css/customStyles-new.css" />
+    <link rel="stylesheet" href="./css/custom-table-heading.css" />
+    <link rel="stylesheet" href="./css/form-control-old.css" />
+    <link rel="stylesheet" href="./css/form-group.css" />
+    <link rel="stylesheet" href="./css/obtn.css" />
+    <link rel="stylesheet" href="./css/omne-card-only.css" />
+    <link rel="stylesheet" href="./css/sod-table.css" />
+    <link rel="stylesheet" href="./css/summary-and-full-details-card.css" />
+    <link rel="stylesheet" href="./css/tabs-group.css" />
+    <link rel="stylesheet" href="./css/xre-table.css" />
+    <link rel="stylesheet" href="./css/accordion-one.css" />
+    <link rel="stylesheet" href="./css/tooltips.css" />
+    <link rel="stylesheet" href="./css/accordion-table-progress.css" />
+    <link rel="stylesheet" href="./css/oicons.css" />
+    <link rel="stylesheet" href="./css/modal-popups.css" />
+    <link rel="stylesheet" href="./css/omnebar.css" />
+    <link rel="stylesheet" href="./css/ascendion/popover-info.css" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: white;
+        }
+
+        article {
+            margin: 0 auto;
+            max-width: 90%;
+            margin-bottom: 16px;
+            border: solid 1px rgb(215, 214, 214);
+            clear: both;
+        }
+
+        article:odd {
+            background: lightcyan;
+        }
+
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            color: rgba(0, 0, 0, 0.05)
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <span class="has-popover">
+            some text here
+            <i class="fa-solid fa-circle-info text-color-action"></i>
+            <div class="popover-info width-250 width-lg-350 align-left pd-0">
+                <div class="popover-info--head col-lg-12 d-flex align-items-center pdx-3 pdy-3">
+                    <h6 class="mg-0 font-12">Per Diem Details </h6>
+                    <button class="bg-none border-0 font-16 mgl-auto" (click)="closePopoverInfo($event)"><i
+                            class="fa-light fa-xmark"></i></button>
+                </div>
+                <div class="popover-info--body col-lg-12 pd-3">
+                    <div class="col-lg-12 pd-0 text-color-yellow font-10 pdb-3">Note: For HP and HP Non-IT clients, “No
+                        Per Diem is Allowed”</div>
+                    <div class="col-lg-12 pd-0 d-flex flex-wrap">
+                        <div class="col-lg-5 pd-0">
+                            <div class="form-group bsr-1">
+                                <label class="mg-0 pd-0 text-color-green2 font-10 text-color-green2">Per Diem</label>
+                                <p class="mg-0 pd-0 text-color-white font-10">Applicable</p>
+                            </div>
+                            <div class="form-group bsr-1">
+                                <label class="mg-0 pd-0 text-color-green2 font-10 text-color-green2">Start Date</label>
+                                <p class="mg-0 pd-0 text-color-white font-10">15/03/2021</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 pd-0 pdl-md-4">
+                            <div class="form-group">
+                                <label class="mg-0 pd-0 text-color-green2 font-10 text-color-green2">Amount (Per
+                                    Day)</label>
+                                <p class="mg-0 pd-0 text-color-white font-10">$ 10.82</p>
+                            </div>
+                            <div class="form-group">
+                                <label class="mg-0 pd-0 text-color-green2 font-10 text-color-green2">End Date</label>
+                                <p class="mg-0 pd-0 text-color-white font-10">15/03/21</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="popover-info--footer col-lg-12 pd-3">
+            <h6>footer content goes here</h6>
+          </div> -->
+            </div>
+        </span>
+    </main>
+    <!-- main body content -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script>
+        $('.gen-tab').on('click', function () {
+            showActiveTabContent($(this));
+        });
+        function showActiveTabContent(thiss) {
+            var tabname = thiss.data('tab');
+            $('*[data-content], *[data-tab]').removeClass('active');
+            $('*[data-content="' + tabname + '"], *[data-tab="' + tabname + '"]').addClass('active');
+        }
+        $(document).on('click', '[data-modalName]', function () {
+            var modalname = $(this).attr('data-modalName');
+            $('#' + modalname).addClass('active');
+        });
+        $('.close').on('click', function () {
+            $(this).closest('.custom_modal').removeClass('active');
+        })
+        $(document).on('click', '.fa-circle-info', function () {
+            $(this).closest('.has-popover').toggleClass('active');
+        })
+        $(document).on('click', '.has-popover i.fa-xmark', function () {
+            $(this).closest('.has-popover').removeClass('active');
+        })
+    </script>
+</body>
+
+</html>

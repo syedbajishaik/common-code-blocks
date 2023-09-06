@@ -321,4 +321,24 @@ textarea.form-control {
     cursor: pointer;
 }
 /* Input chips styles END */
+.form-group input[type=file].form-control {
+    width: 350px;
+    max-width: 100%;
+    color: #444;
+    padding: 5px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+.form-group input[type=file].form-control::file-selector-button {
+    border: none;
+    background: #084cdf;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+.form-group input[type=file].form-control::file-selector-button:hover {
+    background: #0d45a5;
+}
 /* Info: Form group styles end */

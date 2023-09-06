@@ -33,6 +33,16 @@
     --text-color-primary: #4a4a4a;
     --text-color-secondary: #9b9b9b;
     --text-color-secondary-thin-light: #56a9ff;
+    --text-color--secondary-color-medium-dark: var(--color-secondary-medium-dark);
+    --text-color-action: #CE4800;
+    --text-color-green: #3a886a;
+    --text-color-green2: #00F9C1;
+    --text-color-green3: #048769;
+    --text-color-green4: #055160;
+    --text-color-green5: #CFF4FC;
+    --text-color-yellow: #FFC400;
+    --atag-text-color: var(--text-color-green3);
+    --atag-hover-text-color: var(--text-color-green4);
     /* --text-color--secondary-color-medium-dark: var(--color-secondary-medium-dark); */
 
     --text-title-color-primary: var(--color-secondary-thin-light);

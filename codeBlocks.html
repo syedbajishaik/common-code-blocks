@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="./css/accordion-table-progress.css" />
   <link rel="stylesheet" href="./css/oicons.css" />
   <link rel="stylesheet" href="./css/modal-popups.css" />
+  <link rel="stylesheet" href="./css/omnebar.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -52,12 +53,314 @@
     .h6 {
       color: rgba(0, 0, 0, 0.05)
     }
+
+    .main_wrapper h4 small,
+    .esign-card h4 small,
+    .omne-card h4 small {
+      color: var(--omnecard-header-title-small-text-color);
+      font-size: var(--omnecard-header-title-small-text-size);
+      font-weight: 500;
+      background: var(--omnecard-header-title-small-background-color);
+      border-radius: 4px;
+    }
+
+    .custom_body_wrap.custom_container.with-left-sidenav {
+      padding-left: 76px;
+      padding-right: 16px;
+    }
+
+    .with-top-omnebar {
+      margin-top: calc(var(--top-omnebar-height) + 20px);
+    }
+
+    .with-top-navmenu {
+      margin-top: calc(var(--main-navigation-height) + 20px);
+    }
+
+    .with-top-secondarynav {
+      margin-top: calc(48px + 20px);
+    }
+
+    .with-top-omnebar.with-top-navmenu {
+      margin-top: calc(110px + 16px);
+    }
+
+    /* Info: omnebar height(60px) + navmenu height(50px) + secondary nav(48px) */
+    .with-top-omnebar.with-top-navmenu.with-top-secondarynav {
+      margin-top: calc(158px + 20px);
+    }
+
+    /* header */
+    .nav_menu {
+      position: fixed;
+      z-index: 1011;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--color-secondary);
+      padding: 0 2rem;
+      height: 50px;
+      /* overflow: auto; */
+    }
+
+    .nav_menu .row {
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav_brand {
+      background-color: #468ee5;
+      margin: 0 1.5rem;
+    }
+
+    .nav_brand img {
+      max-width: 180px;
+      padding: 8px 10px;
+    }
+
+    .nav_menu .row>div {
+      display: inline-block;
+    }
+
+    .page_title {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-color-primary);
+      padding-left: 2rem;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-top: 0;
+    }
+
+    .nav-items {
+      margin-left: auto;
+    }
+
+    .nav-items ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      align-items: center;
+      height: 100%;
+    }
+
+    .nav-items li {
+      border-left: 1px solid #ffffff87;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .nav-items li a {
+      padding: 0 1.3rem;
+      display: inline-block;
+    }
+
+    .nav_menu .custom_container,
+    .nav_menu .custom_container>.row {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .nav_menu .custom_container {
+      padding: 0;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .nav_menu .custom_container>.row {
+      width: 100%;
+    }
+
+    /* left side menu bar */
+    .leftSideBar {
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 110px;
+      box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.18);
+      background-color: var(--side-navigation-background-color);
+      transition: all 0.5s;
+      z-index: 10;
+      width: var(--side-navigation-width);
+    }
+
+    .leftSideBar.active {
+      width: 15%;
+      z-index: 999;
+    }
+
+    .sideNavItems ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sideNavItems li a {
+      display: inline-block;
+      letter-spacing: 0.3px;
+      color: #555555;
+      width: 100% !important;
+      margin-bottom: 1.5rem;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    .sideNavItems li a.active {
+      background-color: #2069c1;
+      border-radius: 8px;
+      color: #ffffff;
+    }
+
+    .leftSideBar.active li a {
+      padding-right: 0 !important;
+      text-align: left !important;
+    }
+
+    .sideNavItems li a>span:first-child {
+      padding-right: 0 !important;
+    }
+
+    .leftSideBar.active li a>span:first-child {
+      /* padding-right: 1rem !important; */
+    }
+
+    .sideNavItems li a:hover {
+      text-decoration: none;
+      color: #555555;
+    }
+
+    .sideNavItems li a.active:hover {
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    .leftSideBar li a .text_hid {
+      opacity: 0;
+      position: absolute;
+    }
+
+    .leftSideBar.active li a .text_hid {
+      animation: showtext 0s 0.5s forwards;
+    }
+
+    @keyframes showtext {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .sideNavItems li a {
+      position: relative;
+    }
+
+    .sideNavItems--icon {
+      width: var(--side-navigation-width);
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px !important;
+      /* background: white; */
+      position: relative;
+      z-index: 9;
+    }
+
+    .sideNavItems--text {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      white-space: nowrap;
+      left: -65px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .leftSideBar.active .sideNavItems--text {
+      left: 65px;
+      opacity: 1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* left side menu bar */
+
+    @media screen and (max-width: 768px) {
+      .leftSideBar {
+        left: -70px;
+      }
+
+      .custom_body_wrap.custom_container.with-left-sidenav {
+        padding-left: 16px !important;
+      }
+
+      .leftSideBar.active {
+        width: 30%;
+        left: 0px !important;
+        z-index: 9999;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main>
-    <br><br>
+    <div class="omne_bar">
+      <div class="custom_container w_100">
+        <img src="./images/omne_with_tagline_rgb.png" title="omne_with_tagline_rgb">
+      </div>
+    </div>
+    <div class="nav_menu">
+      <div class="custom_container">
+        <div class="row">
+          <div class="side_menu pdy-0">
+            <img src="./images/icons/ic-menu.svg" alt="ic-menu">
+          </div>
+          <div class="tab_title text_18 font_600 ml_2 pdy-0 h_100 pdx-3 d-flex align-items-center"> PO Extension </div>
+          <div class="page_title text_16 font_500 pdy-0 d-none d-lg-block">
+            Search Po Details
+          </div>
+          <div class="nav-items h_100">
+            <span class="open-right-options d-flex align-items-center d-lg-none h_100">
+              <img src="./images/icons/dots-three-vertical-svgrepo-com.svg" alt="ic-tools">
+            </span>
+            <ul class="h_100 d-none d-lg-flex">
+              <li>
+                <div class="dropdown" style="margin: 0 10px;">
+                  <button type="button" data-toggle="dropdown" title="Click to Select Entity"
+                    class="btn btn-primary dropdown-toggle"
+                    style="width: 90px; height: 37px; text-transform: uppercase;">llc
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu d-none">
+                    <li><a style="cursor: pointer !important;">Collabera LLC</a></li>
+                    <li><a style="cursor: pointer !important;">CANADA</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a class="pdy-0"><img src="./images/icons/ic-tools.svg" alt="ic-tools"></a></li>
+              <li><a class="pdy-0"><img src="./images/icons/ic-notification.svg" alt="ic-notification"></a>
+              </li>
+              <li>
+                <span class="white-text pdy-0" style="font-size: 14px; color: white;">Welcome,<br class="d-1280-none">
+                  Syed Shaik
+                  <a href="#" title="Sign out" style="font-size: 14px; color: #fff; padding: 0;">
+                    <i aria-hidden="true" class="fa fa-power-off"></i>
+                  </a>
+                </span>
+              </li><!---->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <main class="custom_body_wrap custom_container with-left-sidenav with-top-omnebar with-top-navmenu">
     <article class="block">
       <div class="maingrid">
         <div class="pc-det">Project ID</div>
@@ -307,6 +610,7 @@
       </div>
     </article>
     <article class="pd-4">
+      <h3 class="h3">Buttons</h3>
       <button type="button" class="obtn obtn-lg obtn-primary"> SUBMIT </button>
       <button type="button" class="obtn obtn-reg obtn-primary"> SUBMIT </button>
       <button type="button" class="obtn obtn-sm obtn-primary"> SUBMIT </button>
@@ -315,8 +619,9 @@
       <!-- Info: obtn-reset-red/obtn-outline-red -->
       <button type="button" class="obtn obtn-reg obtn-outline-red"> CANCEL </button>
     </article>
-    <h3 class="h3">add class "two-cols" for two columns. "three-cols" for three columns</h3>
+
     <article>
+      <h3 class="h3">add class "two-cols" for two columns. "three-cols" for three columns</h3>
       <div class="keyValuePair-mainDiv four-cols d-flex flex-row flex-wrap">
         <div class="sod_table keyValTable mgb-4 mgb-lg-0">
           <div class="keyValRow">
@@ -799,9 +1104,8 @@
                               </div>
                               <div class="custom_td" style="width: 216px;"><span class="upload_circle"> 0 </span></div>
                               <div class="custom_td take_actions_wrap" style="width: 216px;"><a
-                                  class="ng-star-inserted"><img src="./images/icons/ic-eye.svg"
-                                    alt="ic-eye-gray"></a><a data-modalname="void_notes_modal"
-                                  class="pl-5 modal_open ng-star-inserted"><img
+                                  class="ng-star-inserted"><img src="./images/icons/ic-eye.svg" alt="ic-eye-gray"></a><a
+                                  data-modalname="void_notes_modal" class="pl-5 modal_open ng-star-inserted"><img
                                     src="./images/icons/ic-void-doc.svg" alt="ic-approved-one"></a></div>
                             </div>
                           </div>
@@ -829,6 +1133,7 @@
     </article>
     <!-- Info: Tooltips ENDS -->
     <article class="block d-flex align-items-center">
+      <h3 class="h3">Icons</h3>
       <i class="oicon oicon-sm oicon-synchronize mgx-2"></i>
       <i class="oicon oicon-mdsm oicon-activitylog mgx-2"></i>
       <i class="oicon oicon-md oicon-img mgx-2">
@@ -842,9 +1147,9 @@
     <article class="block">
       <h3 class="h3">Modal Popups</h3>
       <div class="col-lg-12 pd-3">
-        <button data-modalname="modal-xsm">Modal "xsm"</button>
+        <button data-modalname="modal-xsm">Modal "xsm/20"</button>
         <div class="custom_modal" id="modal-xsm">
-          <div class="custom_modal_wrap custom_modal-width-xsm">
+          <div class="custom_modal_wrap custom_modal-width-20">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "xsm"</h5>
               <button class="close">
@@ -866,16 +1171,16 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
           </div>
         </div>
         <!-- Info: Modal "sm" -->
-        <button data-modalname="modal-sm">Modal "sm"</button>
+        <button data-modalname="modal-sm">Modal "sm/30"</button>
         <div class="custom_modal" id="modal-sm">
-          <div class="custom_modal_wrap custom_modal-width-sm">
+          <div class="custom_modal_wrap custom_modal-width-30">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "sm"</h5>
               <button class="close">
@@ -897,7 +1202,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -905,9 +1210,9 @@
         </div>
         <!-- Info: Modal "sm" ENDS -->
         <!-- Info: Modal "mdsm" -->
-        <button data-modalname="modal-mdsm">Modal "mdsm"</button>
+        <button data-modalname="modal-mdsm">Modal "mdsm/40"</button>
         <div class="custom_modal" id="modal-mdsm">
-          <div class="custom_modal_wrap custom_modal-width-mdsm">
+          <div class="custom_modal_wrap custom_modal-width-40">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "mdsm"</h5>
               <button class="close">
@@ -929,7 +1234,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -937,9 +1242,9 @@
         </div>
         <!-- Info: Modal "mdsm" ENDS -->
         <!-- Info: Modal "md" -->
-        <button data-modalname="modal-md">Modal "md"</button>
+        <button data-modalname="modal-md">Modal "md/50"</button>
         <div class="custom_modal" id="modal-md">
-          <div class="custom_modal_wrap custom_modal-width-md">
+          <div class="custom_modal_wrap custom_modal-width-50">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "md"</h5>
               <button class="close">
@@ -961,7 +1266,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -969,9 +1274,9 @@
         </div>
         <!-- Info: Modal "md" ENDS -->
         <!-- Info: Modal "lgmd" -->
-        <button data-modalname="modal-lgmd">Modal "lgmd"</button>
+        <button data-modalname="modal-lgmd">Modal "lgmd/60"</button>
         <div class="custom_modal" id="modal-lgmd">
-          <div class="custom_modal_wrap custom_modal-width-lgmd">
+          <div class="custom_modal_wrap custom_modal-width-60">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "lgmd"</h5>
               <button class="close">
@@ -993,7 +1298,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -1001,9 +1306,9 @@
         </div>
         <!-- Info: Modal "lgmd" ENDS -->
         <!-- Info: Modal "lg" -->
-        <button data-modalname="modal-lg">Modal "lg"</button>
+        <button data-modalname="modal-lg">Modal "lg/70"</button>
         <div class="custom_modal" id="modal-lg">
-          <div class="custom_modal_wrap custom_modal-width-lg">
+          <div class="custom_modal_wrap custom_modal-width-70">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "lg"</h5>
               <button class="close">
@@ -1025,7 +1330,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -1033,9 +1338,9 @@
         </div>
         <!-- Info: Modal "lg" ENDS -->
         <!-- Info: Modal "mdlg" -->
-        <button data-modalname="modal-mdlg">Modal "mdlg"</button>
+        <button data-modalname="modal-mdlg">Modal "mdlg/80"</button>
         <div class="custom_modal" id="modal-mdlg">
-          <div class="custom_modal_wrap custom_modal-width-mdlg">
+          <div class="custom_modal_wrap custom_modal-width-80">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "mdlg"</h5>
               <button class="close">
@@ -1057,7 +1362,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -1065,9 +1370,9 @@
         </div>
         <!-- Info: Modal "lg" ENDS -->
         <!-- Info: Modal "xlg" -->
-        <button data-modalname="modal-xlg">Modal "xlg"</button>
+        <button data-modalname="modal-xlg">Modal "xlg/90"</button>
         <div class="custom_modal" id="modal-xlg">
-          <div class="custom_modal_wrap custom_modal-width-xlg">
+          <div class="custom_modal_wrap custom_modal-width-90">
             <div class="custom_modal_header pd-2">
               <h5 class="modal-title mg-0">Modal "xlg"</h5>
               <button class="close">
@@ -1089,7 +1394,7 @@
                     <div class="custom_td colw-50">Signature 17</div>
                     <div class="custom_td colw-50">Content Disclosure Third-Parties</div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -1098,7 +1403,7 @@
         <!-- Info: Modal "xlg" ENDS -->
       </div>
       <div class="clearfix clear-fix"></div>
-      
+
     </article>
   </main>
   <!-- main body content -->
@@ -1115,11 +1420,11 @@
       $('*[data-content], *[data-tab]').removeClass('active');
       $('*[data-content="' + tabname + '"], *[data-tab="' + tabname + '"]').addClass('active');
     }
-    $(document).on('click', '[data-modalName]', function(){
+    $(document).on('click', '[data-modalName]', function () {
       var modalname = $(this).attr('data-modalName');
-      $('#'+modalname).addClass('active');
+      $('#' + modalname).addClass('active');
     });
-    $('.close').on('click', function(){
+    $('.close').on('click', function () {
       $(this).closest('.custom_modal').removeClass('active');
     })
   </script>
