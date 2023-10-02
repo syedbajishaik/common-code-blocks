@@ -1,0 +1,44 @@
+:root {
+    /* Info:start Error/invalid msg colors */
+    --error-message-background-color: #FBE9E7;
+    --error-message-border-color: #dc3545;
+    --error-message-header-text-size: 12px;
+    --error-message-header-text-color: #dc3545;
+    --error-message-text-color: #dc3545;
+    --error-message-text-size: 12px;
+}
+
+.error-message-groupbox {
+    display: block;
+    background: var(--error-message-background-color);
+    border-radius: 8px;
+}
+
+.error-message--header {
+    font-weight: 600;
+    font-size: var(--error-message-header-text-size);
+    color: var(--error-message-header-text-color);
+}
+
+.error-message--list {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+.error-message--listitem {
+    color: var(--error-message-text-color);
+    font-size: var(--error-message-text-size);
+}
+
+.error-message-groupbox p {
+    color: #dc3545 !important;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.rounded-0{
+    border-radius: 0px;
+}

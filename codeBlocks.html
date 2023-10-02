@@ -7,6 +7,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="./prism/prism.css" /> -->
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/styles/stackoverflow-dark.min.css" />
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   <!-- <link rel="stylesheet" href="./css/main.css" /> -->
   <link rel="stylesheet" href="./css/root.css" />
@@ -27,15 +29,24 @@
   <link rel="stylesheet" href="./css/oicons.css" />
   <link rel="stylesheet" href="./css/modal-popups.css" />
   <link rel="stylesheet" href="./css/omnebar.css" />
+  <link rel="stylesheet" href="./css/error-block.css" />
+  <link rel="stylesheet" href="./bs4-inspired-css-for-any-project/css/FontSize.css" />
   <style>
     body {
       font-family: 'Poppins', sans-serif;
       background: white;
     }
 
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: 'Poppins', sans-serif !important;
+    }
+
     article {
       margin: 0 auto;
-      max-width: 90%;
+      max-width: 100%;
       margin-bottom: 16px;
       border: solid 1px rgb(215, 214, 214);
       clear: both;
@@ -305,10 +316,22 @@
         z-index: 9999;
       }
     }
+
+    summary {
+      cursor: pointer;
+      text-transform: uppercase;
+      color: #f08d49;
+    }
   </style>
 </head>
 
 <body>
+  <!-- <details>
+    <summary>&#8618; Source code &#8617;</summary>
+    <pre style="display: grid;" class="mgt-3">
+      <code></code>
+    </pre>
+  </details> -->
   <main>
     <div class="omne_bar">
       <div class="custom_container w_100">
@@ -461,18 +484,21 @@
       <!-- You can wrap only tabs/contents inside a seperate div with your own class -->
     </article>
     <article class="pd-4" style="background: #f6f6f6">
-      <div class="form_control">
-        <label for="ERName" class="text_10">ERE Name</label>
-        <input type="text" id="ERName" class="text_12" value="Vijay Parmar">
-      </div>
-    </article>
-    <article class="pd-4" style="background: #f6f6f6">
       <h1 class="h1">form-group</h1>
       <h3 class="h3">Text Input</h3>
       <div class="form-group">
         <label for="email">ERE NAME</label>
         <input type="text" class="form-control" placeholder="Enter email" id="email" value="Vijay Parmar">
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="form-group"&#62;
+            &#60;label for="email"&#62;ERE NAME&#60;/label&#62;
+            &#60;input type="text" class="form-control" placeholder="Enter email" id="email" value="Vijay Parmar"&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
       <h3 class="h3">Select dropdown</h3>
       <div class="form-group">
         <label for="SelectDocument">Select Document</label>
@@ -487,6 +513,24 @@
           </i>
         </span>
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="form-group"&#62;
+            &#60;label for="SelectDocument"&#62;Select Document&#60;/label&#62;
+            &#60;span class="has-icon"&#62;
+              &#60;select class="form-control required" name="" id="SelectDocument"&#62;
+                &#60;option value=""&#62;Select Document Type&#60;/option&#62;
+                &#60;option value=""&#62;Document 1 type&#60;/option&#62;
+                &#60;option value=""&#62;Document 2 type&#60;/option&#62;
+              &#60;/select&#62;
+              &#60;i class="con"&#62;
+                &#60;img src="./images/icons/ic-bottom-arrow.svg" /&#62;
+              &#60;/i&#62;
+            &#60;/span&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
       <h3 class="h3">Search Input with Icon</h3>
       <!-- <div class="form-group input_icon">
         <input type="text" id="ERName" class="text_12 form-control" placeholder="Search by Candidate Name" value="">
@@ -503,6 +547,20 @@
           </i>
         </span>
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="form-group"&#62;
+            &#60;label for="SearchInput"&#62;Search Input with Icon&#60;/label&#62;
+            &#60;span class="has-icon"&#62;
+              &#60;input type="text" id="SearchInput" class="form-control" placeholder="Search by Candidate Name" value=""&#62;
+              &#60;i class="con"&#62;
+                &#60;img src="./images/icons/ic-search.svg" /&#62;
+              &#60;/i&#62;
+            &#60;/span&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
       <h3 class="h3">Text Input with Error Message</h3>
       <div class="form-group">
         <label for="email">Text Input with Error Message</label>
@@ -523,11 +581,38 @@
           </label>
         </div>
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="form-group"&#62;
+            &#60;label for="" class=""&#62;Form group Radio buttons inline&#60;/label&#62;
+            &#60;div class="form-check-inline"&#62;
+              &#60;label class="form-check-label"&#62;
+                &#60;input type="radio" class="form-check-input" name="optradio"&#62;Option 1
+              &#60;/label&#62;
+            &#60;/div&#62;
+            &#60;div class="form-check-inline"&#62;
+              &#60;label class="form-check-label"&#62;
+                &#60;input type="radio" class="form-check-input" name="optradio"&#62;Option 2
+              &#60;/label&#62;
+            &#60;/div&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
       <h3 class="h3">Form group with label and value</h3>
       <div class="form-group">
         <label for="email">ERE NAME</label>
         <p class="form-control-value mg-0 pd-0">Name of ere here</p>
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="form-group"&#62;
+            &#60;label for="email"&#62;ERE NAME&#60;/label&#62;
+            &#60;p class="form-control-value mg-0 pd-0"&#62;Name of ere here&#60;/p&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
       <h3 class="h3">Form group Switch Button Type 1 with Radio buttons</h3>
       <div class="d-flex">
         <div class="form-group switch-button switch-button-lg">
@@ -618,10 +703,37 @@
       <button type="button" class="obtn obtn-reg obtn-reset"> CANCEL </button>
       <!-- Info: obtn-reset-red/obtn-outline-red -->
       <button type="button" class="obtn obtn-reg obtn-outline-red"> CANCEL </button>
+      <br><br>
+      <details>
+        <summary>Source code</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#x3C;button type=&#x22;button&#x22; class=&#x22;obtn obtn-lg obtn-primary&#x22;&#x3E; SUBMIT &#x3C;/button&#x3E;
+  &#x3C;button type=&#x22;button&#x22; class=&#x22;obtn obtn-reg obtn-primary&#x22;&#x3E; SUBMIT &#x3C;/button&#x3E;
+  &#x3C;button type=&#x22;button&#x22; class=&#x22;obtn obtn-sm obtn-primary&#x22;&#x3E; SUBMIT &#x3C;/button&#x3E;
+  &#x3C;!-- Info: obtn-reset/obtn-outline --&#x3E;
+  &#x3C;button type=&#x22;button&#x22; class=&#x22;obtn obtn-reg obtn-reset&#x22;&#x3E; CANCEL &#x3C;/button&#x3E;
+  &#x3C;!-- Info: obtn-reset-red/obtn-outline-red --&#x3E;
+  &#x3C;button type=&#x22;button&#x22; class=&#x22;obtn obtn-reg obtn-outline-red&#x22;&#x3E; CANCEL &#x3C;/button&#x3E;</code>
+        </pre>
+      </details>
+
+    </article>
+    <article class="pd-4">
+      <div class="omne-card pdx-4 pdy-2">
+        <h1 class="pd-0 mg-0">omne card content goes here</h1>
+      </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="omne-card pdx-4 pdy-2"&#62;
+            &#60;h1 class="pd-0 mg-0"&#62;omne card content goes here&#60;/h1&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
     </article>
 
-    <article>
-      <h3 class="h3">add class "two-cols" for two columns. "three-cols" for three columns</h3>
+    <article class="pd-4">
+      <h3 class="h3 mgb-4 mgt-0">add class "two-cols" for two columns. "three-cols" for three columns</h3>
       <div class="keyValuePair-mainDiv four-cols d-flex flex-row flex-wrap">
         <div class="sod_table keyValTable mgb-4 mgb-lg-0">
           <div class="keyValRow">
@@ -704,13 +816,97 @@
           </div>
         </div>
       </div>
+      <br><br>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="keyValuePair-mainDiv four-cols d-flex flex-row flex-wrap"&#62;
+            &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+            &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+            &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+            &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+              &#60;div class="keyValRow"&#62;
+                &#60;div class="keyVal_key"&#62;
+                  &#60;!-- &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62; --&#62;
+                  Employee ID
+                &#60;/div&#62;
+                &#60;div class="keyVal_val"&#62;
+                  15345
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
     </article>
-    <article>
-      <div class="omne-card pdx-4 pdy-2">
-        <h1>omne card content goes here</h1>
-      </div>
-    </article>
-    <article class="border-0">
+    <!-- info:start summary-details Card -->
+    <article class="border-0 pd-4">
       <div class="omne-card summary-details">
         <div class="coll-lg-12 bb-1 pd-0 summary-details-head">
           <h4 class="mg-0 pdy-2">summary-details Card <small>(VC001245)</small>
@@ -779,8 +975,262 @@
           </div>
         </div>
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="omne-card summary-details"&#62;
+            &#60;div class="coll-lg-12 bb-1 pd-0 summary-details-head"&#62;
+              &#60;h4 class="mg-0 pdy-2"&#62;summary-details Card &#60;small&#62;(VC001245)&#60;/small&#62;
+                &#60;span class="panel-title float-right"&#62;&#60;a data-toggle="collapse" href="#collapseConsultantDetails"
+                    aria-expanded="true" aria-controls="collapseConsultantDetails" class="pd-0 d-inline-block pdt-1"&#62;&#60;img
+                      class="ic-angle-down" width="14" height="14" src="./images/icons/ic-angle-down-cropped.svg"
+                      alt="ic-pin"&#62;&#60;/a&#62;&#60;/span&#62;
+              &#60;/h4&#62;
+            &#60;/div&#62;
+            &#60;div id="collapseConsultantDetails" role="tabpanel" aria-labelledby="collapseConsultantDetails"
+              class="panel-collapse ng-star-inserted collapse in" aria-expanded="true" style=""&#62;
+              &#60;div class="summary-details-body pdy-3 pdx-4"&#62;
+                &#60;div class="keyValuePair-mainDiv d-flex flex-row flex-lg-nowrap flex-wrap"&#62;
+                  &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62;
+                        Contact Person
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        Pradeep Joshi
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-group.svg" alt="ic-estimated-start"&#62;&#60;/span&#62;
+                        Active Consultants
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        80
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                  &#60;/div&#62;
+                  &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-email-id.svg" alt="ic-project-location"&#62;&#60;/span&#62;
+                        Email ID
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        artech.info@domain.com
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-group.svg" alt="ic-flag"&#62;&#60;/span&#62;
+                        Inactive Consultants
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        10
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                  &#60;/div&#62;
+                  &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-contact-details.svg" alt="ic-billing-company"&#62;&#60;/span&#62;
+                        Contact Details
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        000 000 00000
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                  &#60;/div&#62;
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
     </article>
-    <article>
+    <!-- info:end summary-details Card -->
+    <!-- info:start summary-details Card with error-block -->
+    <article class="border-0 pd-4">
+      <div class="omne-card summary-details">
+        <div class="coll-lg-12 bb-1 pd-0 summary-details-head">
+          <h4 class="mg-0 pdy-2">summary-details Card with error-block <small>(VC001245)</small>
+            <span class="panel-title float-right"><a data-toggle="collapse" href="#collapseConsultantDetails"
+                aria-expanded="true" aria-controls="collapseConsultantDetails" class="pd-0 d-inline-block pdt-1"><img
+                  class="ic-angle-down" width="14" height="14" src="./images/icons/ic-angle-down-cropped.svg"
+                  alt="ic-pin"></a></span>
+          </h4>
+        </div>
+        <div id="collapseConsultantDetails" role="tabpanel" aria-labelledby="collapseConsultantDetails"
+          class="panel-collapse ng-star-inserted collapse in" aria-expanded="true" style="">
+          <div class="error-block col-lg-12 pd-0 rounded-0">
+            <span class="error-message-groupbox pd-2 rounded-0">
+              <h5 class="error-message--header mg-0 pd-0 pdb-1">Employee Validation Error</h5>
+              <ul class="error-message--list" *ngFor="let employeeDetailValidation of employeeDetailValidations">
+                <li class="error-message--listitem">employee Detail Validation Message One</li>
+                <li class="error-message--listitem">employee Detail Validation Message Two</li>
+                <li class="error-message--listitem">employee Detail Validation Message Three</li>
+              </ul>
+            </span>
+          </div>
+          <div class="info-block col-lg-12 pd-0">
+            <div class="alert alert-info font-12 border-0 mg-0 rounded-0" role="alert">
+              <i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" title=""></i> &nbsp;
+              <strong>EmployeePackage EmployeeDetail PackageName</strong> <br /> selected Package Description
+            </div>
+          </div>
+          <div class="clearfix clear-fix"></div>
+          <div class="summary-details-body pdy-3 pdx-4">
+            <div class="keyValuePair-mainDiv d-flex flex-row flex-lg-nowrap flex-wrap">
+              <div class="sod_table keyValTable mgb-4 mgb-lg-0">
+                <div class="keyValRow">
+                  <div class="keyVal_key">
+                    <span><img src="./images/icons/ic-employee-code.svg" alt="job-title"></span>
+                    Contact Person
+                  </div>
+                  <div class="keyVal_val">
+                    Pradeep Joshi
+                  </div>
+                </div>
+                <div class="keyValRow">
+                  <div class="keyVal_key">
+                    <span><img src="./images/icons/ic-group.svg" alt="ic-estimated-start"></span>
+                    Active Consultants
+                  </div>
+                  <div class="keyVal_val">
+                    80
+                  </div>
+                </div>
+              </div>
+              <div class="sod_table keyValTable mgb-4 mgb-lg-0">
+                <div class="keyValRow">
+                  <div class="keyVal_key">
+                    <span><img src="./images/icons/ic-email-id.svg" alt="ic-project-location"></span>
+                    Email ID
+                  </div>
+                  <div class="keyVal_val">
+                    artech.info@domain.com
+                  </div>
+                </div>
+                <div class="keyValRow">
+                  <div class="keyVal_key">
+                    <span><img src="./images/icons/ic-group.svg" alt="ic-flag"></span>
+                    Inactive Consultants
+                  </div>
+                  <div class="keyVal_val">
+                    10
+                  </div>
+                </div>
+              </div>
+              <div class="sod_table keyValTable mgb-4 mgb-lg-0">
+                <div class="keyValRow">
+                  <div class="keyVal_key">
+                    <span><img src="./images/icons/ic-contact-details.svg" alt="ic-billing-company"></span>
+                    Contact Details
+                  </div>
+                  <div class="keyVal_val">
+                    000 000 00000
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="omne-card summary-details"&#62;
+            &#60;div class="coll-lg-12 bb-1 pd-0 summary-details-head"&#62;
+              &#60;h4 class="mg-0 pdy-2"&#62;summary-details Card with error-block &#60;small&#62;(VC001245)&#60;/small&#62;
+                &#60;span class="panel-title float-right"&#62;&#60;a data-toggle="collapse" href="#collapseConsultantDetails"
+                    aria-expanded="true" aria-controls="collapseConsultantDetails" class="pd-0 d-inline-block pdt-1"&#62;&#60;img
+                      class="ic-angle-down" width="14" height="14" src="./images/icons/ic-angle-down-cropped.svg"
+                      alt="ic-pin"&#62;&#60;/a&#62;&#60;/span&#62;
+              &#60;/h4&#62;
+            &#60;/div&#62;
+            &#60;div id="collapseConsultantDetails" role="tabpanel" aria-labelledby="collapseConsultantDetails"
+              class="panel-collapse ng-star-inserted collapse in" aria-expanded="true" style=""&#62;
+              &#60;div class="error-block col-lg-12 pd-0 rounded-0"&#62;
+                &#60;span class="error-message-groupbox pd-2 rounded-0"&#62;
+                  &#60;h5 class="error-message--header mg-0 pd-0 pdb-1"&#62;Employee Validation Error&#60;/h5&#62;
+                  &#60;ul class="error-message--list" *ngFor="let employeeDetailValidation of employeeDetailValidations"&#62;
+                    &#60;li class="error-message--listitem"&#62;employee Detail Validation Message One&#60;/li&#62;
+                    &#60;li class="error-message--listitem"&#62;employee Detail Validation Message Two&#60;/li&#62;
+                    &#60;li class="error-message--listitem"&#62;employee Detail Validation Message Three&#60;/li&#62;
+                  &#60;/ul&#62;
+                &#60;/span&#62;
+              &#60;/div&#62;
+              &#60;div class="info-block col-lg-12 pd-0"&#62;
+                &#60;div class="alert alert-info font-12 border-0 mg-0 rounded-0" role="alert"&#62;
+                  &#60;i class="fa fa-info-circle" aria-hidden="true" data-toggle="tooltip" title=""&#62;&#60;/i&#62; &#38;nbsp;
+                  &#60;strong&#62;EmployeePackage EmployeeDetail PackageName&#60;/strong&#62; &#60;br /&#62; selected Package Description
+                &#60;/div&#62;
+              &#60;/div&#62;
+              &#60;div class="clearfix clear-fix"&#62;&#60;/div&#62;
+              &#60;div class="summary-details-body pdy-3 pdx-4"&#62;
+                &#60;div class="keyValuePair-mainDiv d-flex flex-row flex-lg-nowrap flex-wrap"&#62;
+                  &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-employee-code.svg" alt="job-title"&#62;&#60;/span&#62;
+                        Contact Person
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        Pradeep Joshi
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-group.svg" alt="ic-estimated-start"&#62;&#60;/span&#62;
+                        Active Consultants
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        80
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                  &#60;/div&#62;
+                  &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-email-id.svg" alt="ic-project-location"&#62;&#60;/span&#62;
+                        Email ID
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        artech.info@domain.com
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-group.svg" alt="ic-flag"&#62;&#60;/span&#62;
+                        Inactive Consultants
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        10
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                  &#60;/div&#62;
+                  &#60;div class="sod_table keyValTable mgb-4 mgb-lg-0"&#62;
+                    &#60;div class="keyValRow"&#62;
+                      &#60;div class="keyVal_key"&#62;
+                        &#60;span&#62;&#60;img src="./images/icons/ic-contact-details.svg" alt="ic-billing-company"&#62;&#60;/span&#62;
+                        Contact Details
+                      &#60;/div&#62;
+                      &#60;div class="keyVal_val"&#62;
+                        000 000 00000
+                      &#60;/div&#62;
+                    &#60;/div&#62;
+                  &#60;/div&#62;
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
+    </article>
+    <!-- info:end summary-details Card with error-block -->
+    <!-- info:start full-details with standard table -->
+    <article class="border-0 pd-4">
       <div class="omne-card full-details">
         <div class="full-details-header bb-1 coll-lg-12 d-flex flex-wrap justify-content-between pdy-3 pdx-4">
           <h4 class="pd-0 mg-0">full-details Card</h4>
@@ -790,15 +1240,28 @@
         </div>
         <div class="clearfix clear-fix"></div>
       </div>
-      <style>
-      </style>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="omne-card full-details"&#62;
+            &#60;div class="full-details-header bb-1 coll-lg-12 d-flex flex-wrap justify-content-between pdy-3 pdx-4"&#62;
+              &#60;h4 class="pd-0 mg-0"&#62;full-details Card&#60;/h4&#62;
+            &#60;/div&#62;
+            &#60;div class="full-details-body coll-lg-12 pd-4"&#62;
+              &#60;h1&#62;Full details content goes here&#60;/h1&#62;
+            &#60;/div&#62;
+            &#60;div class="clearfix clear-fix"&#62;&#60;/div&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
     </article>
+    <!-- info:end full-details with standard table -->
     <!-- info: full-details with standard table -->
-    <article>
+    <article class="border-0 pd-4">
       <div class="omne-card full-details">
         <div class="full-details-header bb-1 coll-lg-12 d-flex flex-wrap justify-content-between pdy-2 pdx-0">
           <div class="coll-lg-3 d-flex align-items-center">
-            <h4 class="pd-0 mg-0">full-details Card - search, dropdown</h4>
+            <h4 class="pd-0 mg-0 pdl-3">full-details Card - search, dropdown</h4>
           </div>
           <div class="coll-lg-9 d-flex flex-wrap justify-content-start">
             <div class="coll-lg-6 pd-0 mgr-lg-5">
@@ -899,6 +1362,115 @@
         </div>
         <div class="clearfix clear-fix"></div>
       </div>
+      <details>
+        <summary>&#8618; Source code &#8617;</summary>
+        <pre style="display: grid;" class="mgt-3">
+          <code>&#60;div class="omne-card full-details"&#62;
+            &#60;div class="full-details-header bb-1 coll-lg-12 d-flex flex-wrap justify-content-between pdy-2 pdx-0"&#62;
+              &#60;div class="coll-lg-3 d-flex align-items-center"&#62;
+                &#60;h4 class="pd-0 mg-0"&#62;full-details Card - search, dropdown&#60;/h4&#62;
+              &#60;/div&#62;
+              &#60;div class="coll-lg-9 d-flex flex-wrap justify-content-start"&#62;
+                &#60;div class="coll-lg-6 pd-0 mgr-lg-5"&#62;
+                  &#60;div class="form-group mg-0"&#62;
+                    &#60;span class="has-icon"&#62;
+                      &#60;input type="text" id="ERName" class="text_12 form-control" placeholder="Search by Candidate Name"
+                        value=""&#62;
+                      &#60;i class="con"&#62;
+                        &#60;img src="./images/icons/ic-search.svg" alt="ic-search"&#62;
+                      &#60;/i&#62;
+                    &#60;/span&#62;
+                  &#60;/div&#62;
+                &#60;/div&#62;
+                &#60;div class="coll-lg-4 pd-0"&#62;
+                  &#60;div class="form-group dropdown mg-0"&#62;
+                    &#60;span class="has-icon"&#62;
+                      &#60;select class="form-control required" name="" id=""&#62;
+                        &#60;option value="" selected="" style="color: red;"&#62;Select Document Type&#60;/option&#62;
+                        &#60;option value=""&#62;Reject&#60;/option&#62;
+                      &#60;/select&#62;
+                      &#60;i class="con"&#62;
+                        &#60;img src="./images/icons/ic-bottom-arrow.svg"&#62;
+                      &#60;/i&#62;
+                    &#60;/span&#62;
+                  &#60;/div&#62;
+                &#60;/div&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+            &#60;div class="full-details-body coll-lg-12 pd-4"&#62;
+              &#60;h4 class="mg-0 pd-0 pdb-3"&#62;Standard Table Heading&#60;/h4&#62;
+              &#60;div class="table_wrap xre_table standard-table pd-0 table-respo"&#62;
+                &#60;table class=""&#62;
+                  &#60;thead&#62;
+                    &#60;tr&#62;
+                      &#60;th class="colw-12"&#62;Contributon&#60;/th&#62;
+                      &#60;th class="colw-12"&#62;Stage&#60;/th&#62;
+                      &#60;th class="colw-11"&#62;Sub Stage&#60;/th&#62;
+                      &#60;th class="colw-12"&#62;Client/ Consultant&#60;/th&#62;
+                      &#60;th class="colw-6"&#62;Payment Applicable&#60;/th&#62;
+                      &#60;th class="colw-8"&#62;Status&#60;/th&#62;
+                      &#60;th class="colw-4"&#62;Units&#60;/th&#62;
+                      &#60;th class="colw-8"&#62;Amount&#60;/th&#62;
+                      &#60;th class="colw-10"&#62;Frequency&#60;/th&#62;
+                      &#60;th class="colw-7"&#62;Cares ID&#60;/th&#62;
+                      &#60;th class="colw-5"&#62;Resume&#60;/th&#62;
+                      &#60;th class="colw-5"&#62;Action&#60;/th&#62;
+                    &#60;/tr&#62;
+                  &#60;/thead&#62;
+                  &#60;tbody&#62;
+                    &#60;tr&#62;
+                      &#60;td class="colw-12" title="Contributon"&#62;Candidate Referals&#60;/td&#62;
+                      &#60;td class="colw-12" title="Stage"&#62;Entry level positions&#60;/td&#62;
+                      &#60;td class="colw-11" title="Sub Stage"&#62;Resume submitted&#60;/td&#62;
+                      &#60;td class="colw-12" title="Client/ Consultant"&#62;Kenjlaal Patel&#60;/td&#62;
+                      &#60;td class="colw-6" title="Payment Applicable"&#62; No&#60;/td&#62;
+                      &#60;td class="colw-8" title="Status"&#62; N/A&#60;/td&#62;
+                      &#60;td class="colw-4" title="Units"&#62; 0&#60;/td&#62;
+                      &#60;td class="colw-8" title="Amount"&#62; 0&#60;/td&#62;
+                      &#60;td class="colw-10" title="Frequency"&#62;One time payout&#60;/td&#62;
+                      &#60;td class="colw-7" title="Cares ID"&#62;785054&#60;/td&#62;
+                      &#60;td class="colw-5" title="Resume"&#62;&#60;span&#62;&#60;img width="12" height="12"
+                            src="./images/icons/ic-file-solid.svg" alt="ic-billing-company"&#62;&#60;/span&#62;&#60;/td&#62;
+                      &#60;td class="colw-5" title="Action"&#62;Action&#60;/td&#62;
+                    &#60;/tr&#62;
+                    &#60;tr&#62;
+                      &#60;td class="colw-12" title="Contributon"&#62;Business Leads Client intel&#60;/td&#62;
+                      &#60;td class="colw-12" title="Stage"&#62;Submission of leads to sales&#60;/td&#62;
+                      &#60;td class="colw-11" title="Sub Stage"&#62;Resume submitted&#60;/td&#62;
+                      &#60;td class="colw-12" title="Client/ Consultant"&#62;Wells fargo&#60;/td&#62;
+                      &#60;td class="colw-6" title="Payment Applicable"&#62; No&#60;/td&#62;
+                      &#60;td class="colw-8" title="Status"&#62; N/A&#60;/td&#62;
+                      &#60;td class="colw-4" title="Units"&#62; 0&#60;/td&#62;
+                      &#60;td class="colw-8" title="Amount"&#62; 0&#60;/td&#62;
+                      &#60;td class="colw-10" title="Frequency"&#62;One time payout&#60;/td&#62;
+                      &#60;td class="colw-7" title="Cares ID"&#62;785054&#60;/td&#62;
+                      &#60;td class="colw-5" title="Resume"&#62;&#60;span&#62;&#60;img width="12" height="12"
+                            src="./images/icons/ic-file-solid.svg" alt="ic-billing-company"&#62;&#60;/span&#62;&#60;/td&#62;
+                      &#60;td class="colw-5" title="Action"&#62;Action&#60;/td&#62;
+                    &#60;/tr&#62;
+                    &#60;tr&#62;
+                      &#60;td class="colw-12" title="Contributon"&#62;Candidate Referals&#60;/td&#62;
+                      &#60;td class="colw-12" title="Stage"&#62;Entry level positions&#60;/td&#62;
+                      &#60;td class="colw-11" title="Sub Stage"&#62;Resume submitted&#60;/td&#62;
+                      &#60;td class="colw-12" title="Client/ Consultant"&#62;Kenjlaal Patel&#60;/td&#62;
+                      &#60;td class="colw-6" title="Payment Applicable"&#62; No&#60;/td&#62;
+                      &#60;td class="colw-8" title="Status"&#62; N/A&#60;/td&#62;
+                      &#60;td class="colw-4" title="Units"&#62; 0&#60;/td&#62;
+                      &#60;td class="colw-8" title="Amount"&#62; 0&#60;/td&#62;
+                      &#60;td class="colw-10" title="Frequency"&#62;One time payout&#60;/td&#62;
+                      &#60;td class="colw-7" title="Cares ID"&#62;785054&#60;/td&#62;
+                      &#60;td class="colw-5" title="Resume"&#62;&#60;span&#62;&#60;img width="12" height="12"
+                            src="./images/icons/ic-file-solid.svg" alt="ic-billing-company"&#62;&#60;/span&#62;&#60;/td&#62;
+                      &#60;td class="colw-5" title="Action"&#62;Action&#60;/td&#62;
+                    &#60;/tr&#62;
+                  &#60;/tbody&#62;
+                &#60;/table&#62;
+              &#60;/div&#62;
+            &#60;/div&#62;
+            &#60;div class="clearfix clear-fix"&#62;&#60;/div&#62;
+          &#60;/div&#62;</code>
+        </pre>
+      </details>
     </article>
     <!-- info: full-details with custom table -->
     <article>
@@ -1410,6 +1982,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+  <!-- <script src="./prism/prism.js"></script> -->
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"></script>
+  <!-- and it's easy to individually load additional languages -->
+  <script src="https://unpkg.com/@highlightjs/cdn-assets@11.7.0/languages/javascript.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((block) => {
+        hljs.highlightElement(block);
+      });
+    });
+  </script>
   <!-- <script src="./js/script.js"></script> -->
   <script>
     $('.gen-tab').on('click', function () {
