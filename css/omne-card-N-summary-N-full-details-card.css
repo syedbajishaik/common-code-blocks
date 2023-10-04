@@ -7,7 +7,6 @@
     --error-message-text-color: #dc3545;
     --error-message-text-size: 12px;
 }
-
 .error-message-groupbox {
     display: block;
     background: var(--error-message-background-color);
@@ -43,3 +42,33 @@
     border-radius: 0px;
 }
 /* Info:end error-block styles */
+/* Info:start omne-card only styles */
+.esign-card,
+.omne-card {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: -2px 0 12px 0 rgba(0, 0, 0, 0.18);
+}
+/* Info:end omne-card only styles */
+/* Info:start omne-card summary and full details styles */
+.main_wrapper h4,
+.esign-card h4,
+.omne-card h4 {
+    color: #56a9ff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding: 1.5rem;
+}
+.bb-1 {
+    border-bottom: 1px solid #e7e7e7;
+}
+.main_wrapper h4 small,
+.esign-card h4 small,
+.omne-card h4 small {
+    color: #4a4a4a;
+    font-size: 14px;
+    font-weight: 500;
+}
+/* Info:end omne-card summary and full details styles */

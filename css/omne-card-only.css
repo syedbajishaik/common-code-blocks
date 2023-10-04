@@ -1,3 +1,4 @@
+/* Info:start omne-card only styles */
 .esign-card,
 .omne-card {
     background-color: #ffffff;
@@ -5,3 +6,4 @@
     border-radius: 4px;
     box-shadow: -2px 0 12px 0 rgba(0, 0, 0, 0.18);
 }
+/* Info:end omne-card only styles */
