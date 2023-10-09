@@ -6,9 +6,13 @@
   --oicon-lgmd: 28px;
   --oicon-lg: 32px;
   --oicon-xlg: 40px;
+  --oicon-wh: 1em;
   position: relative;
 }
-
+.oicon img{
+  width: var(--oicon-wh);
+  height: var(--oicon-wh);
+}
 .oicon-sm img,
 .oicon-sm {
   display: inline-block;

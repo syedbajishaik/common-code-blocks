@@ -39,8 +39,8 @@
     width: 45%;
 }
 .keyValRow .keyVal_key img {
-    padding-right: 0.5rem;
-    margin-top: -2.4px;
+    /* padding-right: 0.5rem; */
+    /* margin-top: -2.4px; */
 }
 .keyValRow .keyVal_val {
     color: #9b9b9b;
@@ -77,3 +77,35 @@
     }
 }
 /* key value pair table END */
+/* .keyValuePair-mainDiv.two-cols .keyValuePair--wrap{
+    max-width: 50%;
+    flex: 1 0 50%;
+}
+.keyValuePair-mainDiv.three-cols .keyValuePair--wrap{
+    max-width: 50%;
+    flex: 1 0 50%;
+}
+.keyValuePair-mainDiv.four-cols .keyValuePair--wrap{
+    max-width: 50%;
+    flex: 1 0 50%;
+}
+.keyValuePair-mainDiv.five-cols .keyValuePair--wrap{
+    max-width: 50%;
+    flex: 1 0 50%;
+} */
+.keyValuePair--wrap{
+    display: flex;
+    flex-flow: row wrap;
+}
+.keyValuePair--key,
+.keyValuePair--value
+{
+    font-size: inherit;
+}
+.keyValuePair--key{
+    font-weight: 500;
+}
+.keyValuePair--value{
+    color: #9b9b9b;
+    font-weight: 400;
+}
