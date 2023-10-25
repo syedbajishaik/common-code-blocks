@@ -8,11 +8,16 @@
   --oicon-xlg: 40px;
   --oicon-wh: 1em;
   position: relative;
+  background-position: center center;
+  background-size: contain;
 }
-.oicon img{
+
+.oicon img,
+.oicon {
   width: var(--oicon-wh);
   height: var(--oicon-wh);
 }
+
 .oicon-sm img,
 .oicon-sm {
   display: inline-block;
@@ -83,6 +88,14 @@
 
 .oicon-viewsupportingdocs {
   background-image: url("../images/icons/ic_viewsupportingdocuments.svg");
+}
+
+.oicon-copy-before {
+  background-image: url("../images/icons/icon-copy-before.svg");
+}
+
+.oicon-copy-after {
+  background-image: url("../images/icons/icon-copy-after.svg");
 }
 
 /* Info: Icon background images styles END */
